@@ -385,7 +385,8 @@
   flex-direction: column;
   background: var(--ps-surface);
   border-right: 1px solid var(--ps-border);
-  min-width: 280px;
+  min-width: 250px;
+  max-width: 400px;
 }
 
 .solver-problem__tabs,
@@ -624,8 +625,8 @@
 }
 
 .solver-right {
-  flex: 1;
-  min-width: 300px;
+  flex: 2;
+  min-width: 400px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -656,7 +657,7 @@
 
 .solver-editor-wrap {
   flex: 1;
-  min-height: 200px;
+  min-height: 300px;
   background: var(--ps-surface);
   overflow: hidden;
 }
@@ -666,7 +667,8 @@
   background: var(--ps-surface);
   display: flex;
   flex-direction: column;
-  min-height: 120px;
+  min-height: 80px;
+  max-height: 300px;
   overflow: hidden;
 }
 

@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(cd D:/OnlineCompiler && npx tsc --noEmit 2>&1 | head -30)",
-      "Bash(cd D:/OnlineCompiler && npx tsc --noEmit 2>&1 | head -20)",
-      "Bash(cd D:/OnlineCompiler && npx tsc --noEmit 2>&1 | head -10)"
-    ]
-  }
-}

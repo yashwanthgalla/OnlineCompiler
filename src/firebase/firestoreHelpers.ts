@@ -21,6 +21,9 @@ export const getUser = async (uid: string): Promise<DocumentData | null> => {
 }
 
 export const createUser = async (uid: string, email: string, displayName: string = ''): Promise<void> => {
+  const today = new Date()
+  const todayStr = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`
+  
   await setDoc(doc(db, 'users', uid), {
     uid,
     email,
@@ -29,9 +32,11 @@ export const createUser = async (uid: string, email: string, displayName: string
     enrolledCourses: [],
     stats: {
       solved: 0,
-      streak: 0,
+      streak: 1,
       contestRank: null,
     },
+    loginDays: [todayStr],
+    lastLoginDate: todayStr,
     createdAt: new Date(),
   })
 }
